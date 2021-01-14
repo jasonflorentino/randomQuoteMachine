@@ -1,0 +1,44 @@
+
+body, #app {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote-box {
+    width: 50%;
+    min-width: 300px;
+    min-height: 240px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#text {
+
+}
+
+#author {
+
+}
+
+#text h2 {
+    font-size: 2em;
+    color: red;
+}
+
+#author h3 {
+    font-style: italic;
+    font-size: 1em;
+    color: red;
+}
