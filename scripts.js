@@ -12,7 +12,7 @@ const quotes = {
     author: "Alyssa Edwards"
   },
   3: {
-    quote: "You can’t spell ‘legendary’ without… ‘leg’!",
+    quote: "You can’t spell legendary without… leg!",
     author: "Naomi Smalls"
   },
   4: {
@@ -40,7 +40,7 @@ const quotes = {
     author: "Shangela"
   },
   10: {
-    quote: "Miss Vanjie... Miss Vanjie.. Miss Vanjie...",
+    quote: "Miss Vanjie… Miss Vanjie… Miss Vanjie!",
     author: "Vanessa Vanjie Mateo"
   },
   11: {
@@ -48,15 +48,15 @@ const quotes = {
     author: "Latrice Royale"
   },
   12: {
-    quote: "If you can't love yourself, how the hell are you going to love somebody else?",
+    quote: "If you can’t love yourself, how the hell are you going to love somebody else?",
     author: "RuPaul"
   },
   13: {
-    quote: "5Gs please: Good God Girl Get A Grip.",
+    quote: "5Gs please: Good God Girl Get a Grip.",
     author: "Latrice Royale"
   },
   14: {
-    quote: "You both called me losers, and I don't see you out there walking children in nature.",
+    quote: "You both called me losers, and I don’t see you out there walking children in nature.",
     author: "Tammie Brown"
   },
   15: {
@@ -80,8 +80,16 @@ const quotes = {
     author: "Adore Delano"
   },
   20: {
-    quote: "Gia's a fishy girl, she's C.C.C.: Crazy, cuckoo, c*nt!.",
+    quote: "Gia’s a fishy girl, she's C.C.C. – Crazy, Cuckoo, C*nt!",
     author: "Gia Gunn"
+  },
+  21: {
+    quote: "Giving you the Ooh-ah-ah sensation!",
+    author: "Monique Heart"
+  },
+  22: {
+    quote: "Giving you the Ooh-ah-ah sensation!",
+    author: "Monique Heart"
   },
 }
 
@@ -98,7 +106,7 @@ function Text(props) {
 function Author(props) {
   return (
     <div id="author">
-      <h3>{props.author}</h3>
+      <h3>— {props.author}</h3>
     </div>
   );
 }
@@ -113,7 +121,7 @@ function NewQuote(props) {
 
 function TweetQuote(props) {
   return (
-    <a id="tweet-quote" href="">Tweet Quote</a>
+    <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="_blank">Tweet This</a>
   );
 }
 
@@ -149,9 +157,9 @@ class QuoteBox extends React.Component {
       <div id="quote-box">
         <Text quote={this.state.quote} />
         <Author author={this.state.author} />
-        <div>
-          <NewQuote onClick={() => this.getRandomQuote()} />
+        <div id="links">
           <TweetQuote />
+          <NewQuote onClick={() => this.getRandomQuote()} />
         </div>
       </div>
     )
