@@ -3,9 +3,10 @@
   --black: #444444;
   --pink1: #f59acc;
   --pink2: #d1a7bd;
-  --pink3: #f77cbc;
+  --pink3: #d962a3;
   --purp1: #7818db;
   --purp2: #9630ff;
+  --purp3: #de0dad;
 }
 
 body, #app {
@@ -17,6 +18,9 @@ body, #app {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("./images/title.svg");
+    background-repeat: repeat-y;
+    background-size:auto;
 }
 
 #quote-box {
@@ -29,9 +33,10 @@ body, #app {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: var(--black);
+    box-shadow: 0px 8px 20px var(--pink3);
 }
 
 #text {
@@ -49,7 +54,8 @@ body, #app {
 #author {
   align-self: flex-end;
   font-family: Oswald, Helvetica, Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  color: var(--purp3);
 }
 
 #links {
@@ -88,4 +94,57 @@ a {
 
 a:hover {
   background-color: var(--pink3);
+}
+
+/* ANIMATION */
+
+.fade-in {
+  animation: fadeIn ease-out 2s;
+  -webkit-animation: fadeIn ease-out 2s;
+  -moz-animation: fadeIn ease-out 2s;
+  -o-animation: fadeIn ease-out 2s;
+  -ms-animation: fadeIn ease-out 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
 }
