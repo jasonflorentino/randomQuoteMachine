@@ -29,7 +29,7 @@ function NewQuote(props) {
 
 function TweetQuote(props) {
   return (
-    <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="_blank">Tweet This</a>
+    <a id="tweet-quote" href="https://twitter.com/intent/tweet" data-text={props.tweet} target="_blank">Tweet This</a>
   );
 }
 
@@ -66,7 +66,7 @@ class QuoteBox extends React.Component {
         <Text quote={this.state.quote} />
         <Author author={this.state.author} />
         <div id="links">
-          <TweetQuote />
+          <TweetQuote tweet={this.state.quote}/>
           <NewQuote onClick={() => this.getRandomQuote()} />
         </div>
       </div>
